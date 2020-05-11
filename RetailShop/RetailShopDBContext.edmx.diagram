@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c70b78f12b554415abad55deb7c05bee" Name="Diagram1">
+        <EntityTypeShape EntityType="RetailShopDBModel.ProductType" Width="1.5" PointX="0.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RetailShopDBModel.Product" Width="1.5" PointX="2.375" PointY="3.375" />
+        <AssociationConnector Association="RetailShopDBModel.FK_Product_ToTable" />
+        <EntityTypeShape EntityType="RetailShopDBModel.Customer" Width="1.5" PointX="6.625" PointY="2.625" />
+        <EntityTypeShape EntityType="RetailShopDBModel.SalesOrder" Width="1.5" PointX="4.375" PointY="2.25" />
+        <EntityTypeShape EntityType="RetailShopDBModel.SoldItem" Width="1.5" PointX="6.625" PointY="6.375" />
+        <AssociationConnector Association="RetailShopDBModel.FK_Customer_ToTable" />
+        <AssociationConnector Association="RetailShopDBModel.FK_SoldItem_ToTable" />
+        <AssociationConnector Association="RetailShopDBModel.FK_SalesItem_ToTable" />
+        <EntityTypeShape EntityType="RetailShopDBModel.ReturnedItem" Width="1.5" PointX="8.875" PointY="7.25" />
+        <EntityTypeShape EntityType="RetailShopDBModel.SalesReturn" Width="1.5" PointX="6.625" PointY="10.5" />
+        <AssociationConnector Association="RetailShopDBModel.FK_ReturnedItem_ToTable_1" />
+        <AssociationConnector Association="RetailShopDBModel.FK_ReturnedItem_ToTable" />
+        <AssociationConnector Association="RetailShopDBModel.FK_Table_ToTable" />
+        <EntityTypeShape EntityType="RetailShopDBModel.ExpenseTran" Width="1.5" PointX="3" PointY="9" />
+        <EntityTypeShape EntityType="RetailShopDBModel.ExpenseType" Width="1.5" PointX="0.75" PointY="9.375" />
+        <AssociationConnector Association="RetailShopDBModel.FK_ExpenseTrans_ToTable" />
+        <EntityTypeShape EntityType="RetailShopDBModel.Company" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="RetailShopDBModel.tblRole" Width="1.5" PointX="9.375" PointY="11.125" />
+        <EntityTypeShape EntityType="RetailShopDBModel.User" Width="1.5" PointX="11.625" PointY="12.5" />
+        <AssociationConnector Association="RetailShopDBModel.FK_User_ToTable" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

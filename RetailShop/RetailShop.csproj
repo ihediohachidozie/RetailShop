@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{09565B8B-3B12-4C20-864B-5B676B5E90D4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RetailShop</RootNamespace>
+    <AssemblyName>RetailShop</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.ConnectionInfoExtended, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="changePw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changePw.Designer.cs">
+      <DependentUpon>changePw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company.cs">
+      <DependentUpon>RetailShopDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="companyMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="companyMgt.designer.cs">
+      <DependentUpon>companyMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>RetailShopDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBackup.Designer.cs">
+      <DependentUpon>DBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dbRestore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dbRestore.Designer.cs">
+      <DependentUpon>dbRestore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DGVPrinter.cs" />
+    <Compile Include="expense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="expense.Designer.cs">
+      <DependentUpon>expense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseTran.cs">
+      <DependentUpon>RetailShopDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseType.cs">
+      <DependentUpon>RetailShopDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="expHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="expHistory.Designer.cs">
+      <DependentUpon>expHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinancialMgt.Designer.cs">
+      <DependentUpon>FinancialMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="partPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="partPayment.Designer.cs">
+      <DependentUpon>partPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="postExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="postExpense.Designer.cs">
+      <DependentUpon>postExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>RetailShopDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductList.Designer.cs">
+      <DependentUpon>ProductList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductMgt.Designer.cs">
+      <DependentUpon>ProductMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="productsReturned.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="productsReturned.Designer.cs">
+      <DependentUpon>productsReturned.cs</DependentUpon>
+    </Compile>
+    <Compile Include="productsSold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="productsSold.Designer.cs">
+      <DependentUpon>productsSold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductType.cs">
+      <DependentUpon>RetailShopDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductTypeMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductTypeMgt.Designer.cs">
+      <DependentUpon>ProductTypeMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reports.Designer.cs">
+      <DependentUpon>reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailShopDBContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RetailShopDBContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RetailShopDBContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RetailShopDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RetailShopDBContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RetailShopDBContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnedItem.cs">
+      <DependentUpon>RetailShopDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="returnHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="returnHistory.Designer.cs">
+      <DependentUpon>returnHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RolesMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RolesMgt.Designer.cs">
+      <DependentUpon>RolesMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="salesHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="salesHistory.Designer.cs">
+      <DependentUpon>salesHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="salesMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="salesMgt.Designer.cs">
+      <DependentUpon>salesMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="salesList.cs" />
+    <Compile Include="SalesOrder.cs">
+      <DependentUpon>RetailShopDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReturn.cs">
+      <DependentUpon>RetailShopDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="salesReturned.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="salesReturned.Designer.cs">
+      <DependentUpon>salesReturned.cs</DependentUpon>
+    </Compile>
+    <Compile Include="salesTrend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="salesTrend.Designer.cs">
+      <DependentUpon>salesTrend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SoldItem.cs">
+      <DependentUpon>RetailShopDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblRole.cs">
+      <DependentUpon>RetailShopDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>RetailShopDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="userMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userMgt.Designer.cs">
+      <DependentUpon>userMgt.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="changePw.resx">
+      <DependentUpon>changePw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="companyMgt.resx">
+      <DependentUpon>companyMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBackup.resx">
+      <DependentUpon>DBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dbRestore.resx">
+      <DependentUpon>dbRestore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="expense.resx">
+      <DependentUpon>expense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="expHistory.resx">
+      <DependentUpon>expHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinancialMgt.resx">
+      <DependentUpon>FinancialMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="partPayment.resx">
+      <DependentUpon>partPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="postExpense.resx">
+      <DependentUpon>postExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductList.resx">
+      <DependentUpon>ProductList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductMgt.resx">
+      <DependentUpon>ProductMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="productsReturned.resx">
+      <DependentUpon>productsReturned.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="productsSold.resx">
+      <DependentUpon>productsSold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductTypeMgt.resx">
+      <DependentUpon>ProductTypeMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="reports.resx">
+      <DependentUpon>reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="returnHistory.resx">
+      <DependentUpon>returnHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RolesMgt.resx">
+      <DependentUpon>RolesMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="salesHistory.resx">
+      <DependentUpon>salesHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="salesMgt.resx">
+      <DependentUpon>salesMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="salesReturned.resx">
+      <DependentUpon>salesReturned.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="salesTrend.resx">
+      <DependentUpon>salesTrend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userMgt.resx">
+      <DependentUpon>userMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\salesList.datasource" />
+    <None Include="Properties\DataSources\salesList1.datasource" />
+    <None Include="Properties\DataSources\salesOrder.datasource" />
+    <None Include="Properties\DataSources\salesOrderClass.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="RetailShopDBContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RetailShopDBContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="RetailShopDBContext.edmx.diagram">
+      <DependentUpon>RetailShopDBContext.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RetailShopDBContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RetailShopDBContext.edmx</DependentUpon>
+      <LastGenOutput>RetailShopDBContext.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="RetailShopDBContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RetailShopDBContext.edmx</DependentUpon>
+      <LastGenOutput>RetailShopDBContext.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
